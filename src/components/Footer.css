@@ -1,0 +1,15 @@
+.Footer-container{
+    background: rgb(171, 186, 170);
+    height:20vh;
+    width:100%;
+    
+}
+small{
+    color: rgb(15, 14, 14);
+    padding-left: 550px;
+    font-size: 20px;
+}
+.Footer_words h1{
+    color:white;
+    margin-left: 15px;
+}

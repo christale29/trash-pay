@@ -1,24 +1,15 @@
 import React from "react";
-import Home from "../views/home";
+import PaymentInformation from "../views/PayINF"
 import { Routes, Route, useLocation } from "react-router-dom"
 
-
-
-
-
-const Index = () => {
-    const currentUrl = useLocation().pathname
+const Index=()=>{
     return (
-        <>
+      
             <Routes>
-                <Route path="/" element={<Home />}></Route>
+            <Route exact path="/PaymentInformation" element={<PaymentInformation/>}></Route>
             </Routes>
 
-
-
-
-
-        </>
+       
     )
 }
 

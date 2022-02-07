@@ -1,5 +1,6 @@
 import React from "react";
 import "./homelayout.css";
+import Footer from"./footer";
 import Header from "../components/header";
 
 
@@ -14,6 +15,7 @@ const Home = ({ children }) => {
             
             {children}
             </div>
+            <Footer/>
         </div>
     )
 }

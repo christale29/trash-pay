@@ -1,15 +1,53 @@
 .Footer-container{
-    background: rgb(171, 186, 170);
-    height:20vh;
+    background: rgb(69, 114, 66);
+    height:40vh;
     width:100%;
     
 }
-small{
+/*small{
     color: rgb(15, 14, 14);
-    padding-left: 550px;
+   /* padding-left: 550px;
     font-size: 20px;
-}
+  padding-bottom: 100px;
+}*/
 .Footer_words h1{
     color:white;
     margin-left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.hr{
+    border-top: 2px dashed white;
+    margin-bottom: 200px;
+    display: flex;
+    color: white;
+    }
+.hr1 h2{
+    color:white;
+    margin-left: 400px;
+}
+.hr2 h2{
+    color:white;
+    margin-left: 400px;
+}
+.hr h2{
+    color:white;
+}
+.hr1 h3{
+    padding-left: 400px;
+    color:white;
+    margin-left: 10px;
+
+}
+
+.ops h3{
+    color:white;
+    margin-left: 10px;
+}
+.icon{
+    padding-left: 400px;
+    margin-left: 10px;
+    color:black;
+    font-size: 30px;
+   display: flex;
 }

@@ -8,7 +8,7 @@ const PaymentInformation=()=>{
     return(
         <div className="home-page">
              <Homelayout>
-             <Nav/>
+            
              <div className="home-card">
              <h3>“House cleaning and organizing is a practice, not a project.”</h3>
            

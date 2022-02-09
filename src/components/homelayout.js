@@ -3,14 +3,12 @@ import "./homelayout.css";
 import Footer from"./footer";
 import Header from "../components/header";
 import Nav from "../components/nav"
-
-
-
-const Home = ({ children }) => {
+const Homelayout = ({ children }) => {
     return (
         <div className="home-container">
           
             <div style={{minHeight: "100vh"}}>
+
             <Header />
             <Nav/>
             
@@ -20,4 +18,4 @@ const Home = ({ children }) => {
         </div>
     )
 }
-export default Home;
+export default Homelayout;

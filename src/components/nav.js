@@ -121,7 +121,7 @@ const Nav=()=>{
               Justify your payment
               </Menu.Item>
               <Menu.Item key="1">
-              See your records
+              <a href="/QRcode">See your records</a>
               </Menu.Item>
             </Menu>
           )}

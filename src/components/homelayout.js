@@ -2,7 +2,7 @@ import React from "react";
 import "./homelayout.css";
 import Footer from"./footer";
 import Header from "../components/header";
-
+import Nav from "../components/nav"
 
 
 
@@ -12,6 +12,7 @@ const Home = ({ children }) => {
           
             <div style={{minHeight: "100vh"}}>
             <Header />
+            <Nav/>
             
             {children}
             </div>

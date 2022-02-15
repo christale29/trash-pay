@@ -1,126 +1,118 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.home-container{
-    background-image:linear-gradient(
-        to right bottom,
-    rgba(16, 16, 16, 0.5),
-    rgba(13, 160, 79, 0.336)
-
+.home-container {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(16, 16, 16, 0.5),
+      rgba(13, 160, 79, 0.336)
     ),
-     url("../asset/img/home.jpeg");
-    background-repeat: no-repeat;
-    background-position:center center fixed;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size: cover;
-    width:100%;
-    background-attachment: fixed;
-    object-fit: cover;
+    url("../asset/img/home.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+  object-fit: cover;
+}
+.home-card {
+  width: 300px;
+  border: 1px solid white;
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  float: right;
+  margin-right: 12%;
+  margin-top: 10%;
+  box-shadow: 1px 3px 3px black;
+  background: rgba(250, 240, 230, 0.76);
+}
+.home-card h3 {
+  color: #1f4315;
+  text-align: center;
+}
+.button {
+  padding: 10px;
+  background: #1f4315;
+  width: 150px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  font-size: 18px;
+  float: right;
+  margin-top: 19%;
+  margin-right: -17%;
+  border-radius: 10px;
 
-
-    
-    
+  text-transform: uppercase;
 }
-.home-card{
-    width:300px;
-    border:1px solid white;
-    padding:20px;
-    font-size:16px;
-    border-radius:10px;
-   float:right;
-   margin-right:12%;
-   margin-top:10%;
-   box-shadow:1px 3px 3px black;
-    background:rgba(250, 240, 230, 0.76)
-
+.button a {
+  color: white;
 }
-.home-card h3{
-    color:#1F4315;
-    text-align:center;
-   
-}
-.button{
-    padding:10px;
-    background:#1F4315;
-    width:150px;
-    border-top:1px solid white;
-    border-left:1px solid white;
-    font-size:18px;
-    float:right;
-    margin-top:19%;
-    margin-right:-17%;
-    border-radius: 10px;
-   
-    text-transform: uppercase;
-}
-.button a{
-    color:white;
-}
-.button a:hover{
-    color:rgba(255, 255, 255, 0.562);
+.button a:hover {
+  color: rgba(255, 255, 255, 0.562);
 }
 .login-form {
-    max-width: 300px;
+  max-width: 45%;
 }
 .login-form-forgot {
-    float: right;
+  float: right;
 }
 .ant-col-rtl .login-form-forgot {
-    float: left;
+  float: left;
 }
 .login-form-button {
-    color: green;
-    width: 100%;
-   
+  color: green;
+  width: 100%;
 }
 .reg-a {
-    /* background-color: #1e4b10dc; */
-    height: 100vh;
-    padding-top: 50px;
-    
-    
-
-
+  /* background-color: #1e4b10dc; */
+  height: 100vh;
+  width: 100%;
+  padding: 50px 30%;
 }
-.login-form{
-    font-size: larger;
+.login-form {
+  font-size: larger;
 }
-.House-inf{
-    background-color:rgba(255, 255, 255, 0.918);
-    width: 200%;
-    height: 70vh;
-    margin-left: 400px;
-    padding: 50px;
+.House-inf {
+  background-color: rgba(255, 255, 255, 0.918);
+  width: 200%;
+  height: 70vh;
+  margin-left: 400px;
+  padding: 50px;
+  text-align: center;
 }
-.House-inf Form.Item{
-    padding-top: 30px;
+.House-inf Form.Item {
+  padding-top: 30px;
 }
-.house-ad{
-    margin-left: 100px;
+.house-ad {
+  margin-left: 100px;
 }
-.buto Button{
-    background-color: rgb(24, 75, 24);
-    width: 40%;
-    margin-left: 50%;
-    box-sizing: border-box;
+.buto Button:hover {
+  background-color: rgba(24, 75, 24, 0.753);
+  border-color: rgb(24, 75, 24);
 }
-.Pay-inf{
-    background-color:rgba(255, 255, 255, 0.918);
-    width:150%;
-    height: 70vh;
-    margin-left: 500px;
-    padding: 50px; 
+.buto Button {
+  background-color: rgb(24, 75, 24);
+  border-color: rgb(24, 75, 24);
+  width: 40%;
+  margin-left: 50%;
+  box-sizing: border-box;
 }
-.buto1{
-    margin-left: 100px;
-    padding-left: 30px;
+.Pay-inf {
+  background-color: rgba(255, 255, 255, 0.918);
+  width: 500px;
+  height: 70vh;
+  padding: 50px;
 }
-.buto1 Button{
-    background-color: rgb(24, 75, 24);
-   
-
+.buto1 {
+  margin-left: 100px;
+  padding-left: 30px;
+}
+.buto1 Button {
+  background-color: rgb(24, 75, 24);
 }

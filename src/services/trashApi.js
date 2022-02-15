@@ -1,6 +1,10 @@
 import axios from "axios";
 
+<<<<<<< HEAD
 const  TRASH_API_URL="http://192.168.1.77:4040";
+=======
+const  TRASH_API_URL="http://localhost:4040";
+>>>>>>> 125c617 (the fetching apis)
 
 
  var config ={

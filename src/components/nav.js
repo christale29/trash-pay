@@ -118,7 +118,7 @@ const Nav=()=>{
                <a href="/RegHouse">Register the house</a> 
               </Menu.Item>
               <Menu.Item key="1">
-              Justify your payment
+              <a href='/JustifyPay'>Justify your payment</a>
               </Menu.Item>
               <Menu.Item key="1">
               <a href="/QRcode">See your records</a>

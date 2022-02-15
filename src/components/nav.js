@@ -3,11 +3,12 @@ import "./header.css";
 import 'antd/dist/antd.css';
 // import signin from "./sign"
 // import { useNavigate } from "react-router";
-import { Input,Space } from 'antd';
+import { Input,notification,Space } from 'antd';
 import { Menu, Dropdown } from 'antd';
 import { Modal,Form, InputNumber, Button, Checkbox } from 'antd';
 import { DownOutlined ,LockOutlined,UserOutlined} from '@ant-design/icons';
 import 'antd/dist/antd.css';
+import TrashApis from "../services/trashApi"
 // import './index.css';
 // import { Form, Input, Button, Checkbox } from 'antd';
 // import { UserOutlined, LockOutlined } from '@ant-design/icons';
@@ -30,7 +31,19 @@ const Nav=()=>{
   const [signInvisible,setsignInVisible]=useState(false);
 
   const onFinish=(values)=>{
-      console.log(values)
+      console.log("Received values of form",values);
+      TrashApis.createAccount(values).then((res) => {
+        if(!res){
+          return notification.error({message:"server is down"})
+        }
+        if(!res){
+          return notification.success({message:"your account has been created"})
+        }
+        else{
+          return notification.error({
+            message:!res.data.error?res.data.message:res.data.error,})
+        }
+      })
       localStorage.setItem("userLogedIn",true)
     
   }
@@ -155,21 +168,21 @@ const Nav=()=>{
             <Form onFinish={onFinish}>
                 <Form.Item 
                 label="First name"
-                name="first name"
+                name="firstName"
                 rules={[{required:true}]}>
                     <Input type="firstname"/>
                 
                 </Form.Item>
                 <Form.Item 
                 label="last name"
-                name="last name"
+                name="lastName"
                 rules={[{required:true}]}>
                     <Input type="lastname"/>
                 
                 </Form.Item>
                 <Form.Item 
                 label="Phone number"
-                name="Phone number"
+                name="phone"
                 rules={[{required:true}]}>
                     <Input type="Phone number"/>
                 

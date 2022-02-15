@@ -3,10 +3,6 @@ import "./homelayout.css";
 import Footer from"./footer";
 import Header from "../components/header";
 import Nav from "../components/nav"
-
-
-
-
 const Homelayout = ({ children }) => {
     return (
         <div className="home-container">

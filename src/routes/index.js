@@ -14,7 +14,7 @@ const Index=()=>{
     return (
       
             <Routes>
-            <Route exact path="/PaymentInformation" element={<PaymentInformation/>}></Route>
+            <Route exact path="/" element={<PaymentInformation/>}></Route>
 
             <Route exact path="/QRcode" element={<QRCode/>}></Route>
 

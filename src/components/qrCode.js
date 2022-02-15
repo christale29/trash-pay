@@ -1,25 +1,31 @@
+import React, { useState } from "react";
+import QRCode from "qrcode.react";
+import HomeLayout from "../components/homelayout";
+const Data = () => {
+  const [value, setValue] = useState("Paid Successfull");
 
-import React ,{Component} from 'react';
-import QRCode from 'qrcode.react';
-import HomeLayout from '../components/homelayout'
-class Data extends Component{
-    state={
-        value:"Paid Successfull"
-    }
-   render (){
-    return(
-        <HomeLayout>
-        <div style ={{textAlign:'right',paddingTop:"100px",marginRight:"40px"}}>
-              <h1>Scan the Record</h1>
-              <QRCode style={{width:'15%',height:'15p%'}}
-            
-               id ='abcdf'
-               value={this.state.value}
-              />
-              <h1>SCAN ME</h1>
-        </div>
-        </HomeLayout>
-    );
-}
-}
+  return (
+    <HomeLayout>
+      <div
+        style={{
+          float: "right",
+          textAlign: "center",
+          paddingTop: "100px",
+          marginRight: "40px",
+          background: "white",
+          padding: "50px",
+          width: "25%",
+        }}
+      >
+        <h1>Scan the Record</h1>
+        <QRCode
+          style={{ width: "90%", height: "15p%" }}
+          id="abcdf"
+          value={value}
+        />
+        <h1>SCAN ME</h1>
+      </div>
+    </HomeLayout>
+  );
+};
 export default Data;

@@ -4,7 +4,7 @@ import QRCode from 'qrcode.react';
 import HomeLayout from '../components/homelayout'
 class Data extends Component{
     state={
-        value:"paid"
+        value:"Paid Successfull"
     }
    render (){
     return(

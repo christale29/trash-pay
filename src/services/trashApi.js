@@ -1,12 +1,12 @@
 import axios from "axios";
-
-const  TRASH_API_URL="http://192.168.1.77:4040";
+import store from 'store';
+const  TRASH_API_URL="http://localhost:4040";
 
 
  var config ={
      headers:{
          "Content-Type":"application/json",
-
+        'x-api-key':`${store.get("x-api-key")}`
        },
  };
  class Application {
@@ -34,6 +34,22 @@ const  TRASH_API_URL="http://192.168.1.77:4040";
              console.log(error);
          }
         }
+        
+            async signin (data){
+           try{
+               const response =await axios.post(
+                TRASH_API_URL + 'user/login',
+                data,
+                config  
+               );
+               store.set('x-api-key',response.data.token);
+               return response;
+           } catch(error){
+               //console.log(error.response);
+               return error.response;
+           }
+            }
+        
        
  }
  export default new Application();

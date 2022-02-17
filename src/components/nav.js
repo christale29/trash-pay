@@ -3,6 +3,7 @@ import "./header.css";
 import "antd/dist/antd.css";
 // import signin from "./sign"
 // import { useNavigate } from "react-router";
+import {useNavigate} from 'react-router-dom'
 import { Input, notification, Space } from "antd";
 import { Menu, Dropdown } from "antd";
 import { Modal, Form, InputNumber, Button, Checkbox } from "antd";
@@ -37,15 +38,38 @@ const Nav = () => {
         });
       }
     });
+    TrashApis.signin(values).then((res) => {
+      if (!res) {
+        return notification.error({ message: "server is down" });
+      }
+      if (res.status === 200) {
+        console.log(res.data.data);
+
     localStorage.setItem("userLogedIn", true);
+    navigate("/dash/register");
+        if (res.data.data.role === "admin") {
+          localStorage.setItem("userLogedIn", true);
+          navigate("/dash/register");
+        } else if (res.data.data.role === "user") {
+          localStorage.setItem("userLogedIn", true);
+          navigate("/user/board");
+        }
+      } else {
+        return notification.error({
+          message: !res.data.error ? res.data.message : res.data.error,
+        });
+      }
+    });
   };
+
+  const navigate = useNavigate();
 
   return (
     <>
       <Modal
       style={{textAlign:"center"}}
         visible={signInvisible}
-        width="30%"
+        width="40%"
         onOk={() => setsignInVisible(false)}
         onCancel={() => setsignInVisible(false)}
       >
@@ -59,7 +83,7 @@ const Nav = () => {
           initialValues={{
             remember: true,
           }}
-          onFinish={onFinish}
+          // onFinish={onFinish}
         >
           <Form.Item
             name="phone number"

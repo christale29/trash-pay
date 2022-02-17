@@ -22,7 +22,7 @@ const RegHouse = () => {
           onFinish={onFinish}
         >
           <div className="House-inf">
-            <h1>REGISTRATION OF THE HOUSE</h1>
+            <h1 style={{color:'green'}}>REGISTRATION OF THE HOUSE</h1>
             <Form.Item
               name="House Owner"
               label="House Owner"
@@ -34,7 +34,7 @@ const RegHouse = () => {
                 },
               ]}
             >
-              <Input />
+              <Input style={{borderRadius: "10px"}}/>
             </Form.Item>
 
             <Form.Item
@@ -48,7 +48,7 @@ const RegHouse = () => {
                 },
               ]}
             >
-              <Input />
+              <Input style={{borderRadius: "10px",}}/>
             </Form.Item>
 
             <Form.Item name="House Address" label="House Address"></Form.Item>
@@ -65,7 +65,7 @@ const RegHouse = () => {
                   },
                 ]}
               >
-                <Input />
+                <Input style={{borderRadius: "10px"}} />
               </Form.Item>
 
               <Form.Item
@@ -79,7 +79,7 @@ const RegHouse = () => {
                   },
                 ]}
               >
-                <Input />
+                <Input style={{borderRadius: "10px"}}/>
               </Form.Item>
 
               <div className="buto">

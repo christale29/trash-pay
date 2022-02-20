@@ -15,7 +15,7 @@ import {
 } from '@ant-design/icons';
 
 const { Header, Sider, Content } = Layout;
-const DashLayout=({children})=>{
+const DashboardLayout=({children})=>{
     
         const [collapsed,setCollapsed]=useState(false);
         const toggle=()=>{
@@ -60,4 +60,4 @@ const DashLayout=({children})=>{
 
     )
 }
-export default DashLayout;
+export default DashboardLayout;

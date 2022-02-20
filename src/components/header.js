@@ -8,10 +8,10 @@ const Header = () => {
     <div className="header">
       <div className="navbar">
         <div className="nav-logo-left">
-          <img src={logo} />
+        <img src={logo2} />
         </div>
         <div className="nav-logo-right">
-          <img src={logo2} />
+         
         </div>
         <div id="google_translate_element"></div>
       </div>

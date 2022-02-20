@@ -6,7 +6,7 @@ import NewHouse from '../views/dashboard/Newhouse';
 import RegHouse from "../components/RegHouse";
 import JustifyPay from "../components/justifyPay";
 import ALLHOUSE from "../views/dashboard/AllHouse";
-import DashLayout from '../components/dashboardLayout';
+import DashboardLayout from '../components/DashboardLayout';
 import AllUsers from "../components/tableGetAllUsers"
 import { Routes, Route, useLocation } from "react-router-dom";
 import UserDashboard from "../views/userDashboard";
@@ -27,18 +27,18 @@ const Index=()=>{
 
             
             <Route exact path="/allUsers" element={<AllUsers/>}></Route>
-            <Route exact path="/dash" element={<DashLayout/>}></Route>
+            <Route exact path="/dash" element={<DashboardLayout/>}></Route>
             <Route exact path="/user/board" element={<UserDashboard/>}></Route>
             </Routes>
    {isUserLoggedIn && currentUrl.includes('dash')?(
- <DashLayout>
+ <DashboardLayout>
 <Routes>
 <Route  exact path ='/dash/house' element ={<ALLHOUSE></ALLHOUSE>}> </Route> 
 <Route  exact path ='/dash/register' element ={<NewHouse></NewHouse>}> </Route>
 <Route  exact path ='/dash/login' element ={<Login></Login>}> </Route>
 
 </Routes>
-</DashLayout>
+</DashboardLayout>
 
  ):(
  <> </>            

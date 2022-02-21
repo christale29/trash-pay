@@ -1,0 +1,21 @@
+[
+    {
+        "houseNo":"001",
+        "district":"Gasabo",
+        "sector":"Nyamirambo"
+        
+    },
+    {
+        "houseNo":"002",
+        "district":"Nyarungege",
+        "sector":"kimironko"
+        
+    }
+    ,
+    {
+        "houseNo":"003",
+        "district":"KIcukiro",
+        "sector":"Gikondo"
+        
+    }
+]

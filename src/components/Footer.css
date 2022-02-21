@@ -1,6 +1,6 @@
 .Footer-container{
     background: rgb(69, 114, 66);
-    height:40vh;
+    height:43vh;
     width:100%;
     
 }
@@ -10,15 +10,25 @@
     font-size: 20px;
   padding-bottom: 100px;
 }*/
+.Footer_words{
+    /* background: rgb(33, 49, 32); */
+    height:40vh;
+    width:97%;
+    margin-left: 30px;
+}
 .Footer_words h1{
     color:white;
     margin-left: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
+.Footer_words img{
+    height: 17vh;
+    width: 10%;
+}
 .hr{
     border-top: 2px dashed white;
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
     display: flex;
     color: white;
     }
@@ -50,4 +60,23 @@
     color:black;
     font-size: 30px;
    display: flex;
+}
+.style{
+    width: 100%;
+    height: 0.1vh;
+    background-color: rgb(186, 187, 187);
+}
+.crop{
+    width: 100%;
+    /* height: 2vh; */
+    
+    /* background-color: rgb(107, 55, 55); */
+align-items: center;
+}
+.crop h4{
+    /* margin-top: 10px; */
+    align-items: center;
+    margin-left: 650px;
+    color:white;
+
 }

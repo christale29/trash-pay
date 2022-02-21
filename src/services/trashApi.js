@@ -56,20 +56,20 @@ const  TRASH_API_URL="http://localhost:4040";
          }
         }
         
-            async signin (data){
-           try{
-               const response =await axios.post(
-                TRASH_API_URL + 'user/login',
-                data,
-                config  
-               );
-               store.set('x-api-key',response.data.token);
-               return response;
-           } catch(error){
-               //console.log(error.response);
-               return error.response;
-           }
-            }
+        //     async signin (data){
+        //    try{
+        //        const response =await axios.post(
+        //         TRASH_API_URL + 'user/login',
+        //         data,
+        //         config  
+        //        );
+        //        store.set('x-api-key',response.data.token);
+        //        return response;
+        //    } catch(error){
+        //        //console.log(error.response);
+        //        return error.response;
+        //    }
+        //     }
         
        
  }

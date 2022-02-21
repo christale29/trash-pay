@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import "./header.css";
 import "antd/dist/antd.css";
-import {Link} from "react-router-dom"
-
-// import signin from "./sign"
-import { useNavigate } from "react-router";
-
 // import { useNavigate } from "react-router";
-// import {useNavigate} from 'react-router-dom'
+
+import {useNavigate} from 'react-router-dom'
 
 import { Input, notification, Space } from "antd";
 import { Menu, Dropdown } from "antd";
@@ -15,9 +11,8 @@ import { Modal, Form, InputNumber, Button, Checkbox } from "antd";
 import { DownOutlined, LockOutlined, UserOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import TrashApis from "../services/trashApi";
-// import './index.css';
-// import { Form, Input, Button, Checkbox } from 'antd';
-// import { UserOutlined, LockOutlined } from '@ant-design/icons';
+
+
 
 const { Search } = Input;
 
@@ -26,7 +21,7 @@ const onSearch = (value) => console.log(value);
 const Nav = () => {
   const [visible, setVisible] = useState(false);
   const [signInvisible, setsignInVisible] = useState(false);
-  const navigate =useNavigate();
+  // const navigate =useNavigate();
   const onFinish = (values) => {
     console.log("Received values of form", values);
     TrashApis.createAccount(values).then((res) => {
@@ -92,7 +87,7 @@ const Nav = () => {
   };
   
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <>

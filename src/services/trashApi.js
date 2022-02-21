@@ -3,7 +3,9 @@ import axios from "axios";
 import store from "store"
 
 
-import store from 'store';
+
+
+
 
 const  TRASH_API_URL="http://localhost:4040";
 
@@ -15,7 +17,11 @@ const  TRASH_API_URL="http://localhost:4040";
          "x-api-key":'${store.get("x-api-key")}'
 
 
+
+        
+
         'x-api-key':`${store.get("x-api-key")}`
+
 
        },
  };
@@ -59,7 +65,21 @@ const  TRASH_API_URL="http://localhost:4040";
              console.log(error);
          }
         }
-        
+                //     async signin (data){
+        //    try{
+        //        const response =await axios.post(
+        //         TRASH_API_URL + 'user/login',
+        //         data,
+        //         config  
+        //        );
+        //        store.set('x-api-key',response.data.token);
+        //        return response;
+        //    } catch(error){
+        //        //console.log(error.response);
+        //        return error.response;
+        //    }
+        //     }
+
             async signin (data){
            try{
                const response =await axios.post(
@@ -74,7 +94,7 @@ const  TRASH_API_URL="http://localhost:4040";
                return error.response;
            }
             }
-        
+
        
  }
  export default new Application();

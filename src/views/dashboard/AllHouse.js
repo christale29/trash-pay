@@ -4,6 +4,7 @@ import {Table,Space} from 'antd';
 import AllavailableHOUSE from '../../asset/img/constant/house.json';
 import AllavailabeUsers from'../../asset/img/constant/infomation.json';
 import{EyeOutlined,EditOutlined,DeleteOutlined } from '@ant-design/icons';
+import  DashboardLayout from "../../components/DashboardLayout";
 const Column =[
     {
         title:'House Number',
@@ -69,10 +70,10 @@ const Column1 =[
 ];
 const AllHouse=()=>{
     return(
-        <>
+        <DashboardLayout>
       <Table columns={Column} dataSource={AllavailableHOUSE}/>
       <Table columns={Column1} dataSource={AllavailabeUsers}/>
-      </>
+      </DashboardLayout>
       
     )
 }

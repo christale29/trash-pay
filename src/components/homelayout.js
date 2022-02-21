@@ -10,6 +10,7 @@ const Homelayout = ({ children }) => {
             <div style={{minHeight: "100vh"}}>
 
             <Header />
+            
             <Nav/>
             
             {children}

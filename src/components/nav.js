@@ -74,9 +74,9 @@ const Nav = () => {
         onCancel={() => setsignInVisible(false)}
       >
         <h1>TRASH PAY</h1>
-        <h2>signin form</h2>
+        <h2>Sign In</h2>
         <Form
-        style={{paddingLeft:"50px"}}
+        style={{paddingLeft:"40px"}}
           onFinish={onFinish}
           name="normal_login"
           className="login-form"

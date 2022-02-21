@@ -1,6 +1,6 @@
 import React from "react";
 import PaymentInformation from "../views/PayINF"
-import Login from '../views/dashboard/Login';
+
 import QRCode from "../components/qrCode";
 import NewHouse from '../views/dashboard/Newhouse';
 import RegHouse from "../components/RegHouse";
@@ -29,16 +29,18 @@ const Index=()=>{
             <Route exact path="/allUsers" element={<AllUsers/>}></Route>
             <Route exact path="/dash" element={<DashLayout/>}></Route>
             <Route exact path="/user/board" element={<UserDashboard/>}></Route>
+            <Route  exact path ='/dash/house' element ={<ALLHOUSE></ALLHOUSE>}> </Route>
+            <Route  exact path ='/dash/register' element ={<NewHouse></NewHouse>}> </Route> 
             </Routes>
    {isUserLoggedIn && currentUrl.includes('dash')?(
  <DashLayout>
 <Routes>
-<Route  exact path ='/dash/house' element ={<ALLHOUSE></ALLHOUSE>}> </Route> 
-<Route  exact path ='/dash/register' element ={<NewHouse></NewHouse>}> </Route>
-<Route  exact path ='/dash/login' element ={<Login></Login>}> </Route>
+
+
+
 
 </Routes>
-</DashLayout>
+</DashLayout>  
 
  ):(
  <> </>            

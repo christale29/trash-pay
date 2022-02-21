@@ -33,7 +33,7 @@ const DashboardLayout=({children})=>{
                 <Link to='/dash/house' >Manage all Payment </Link>
                 </Menu.Item>
                 <Menu.Item key="3" icon={<UploadOutlined />}>
-                <Link to='/dash/login' >Login</Link>
+                <Link to='/' >Logout</Link>
                 </Menu.Item>
               </Menu>
             </Sider>

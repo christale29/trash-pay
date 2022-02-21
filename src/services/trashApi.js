@@ -20,7 +20,7 @@ const  TRASH_API_URL="http://localhost:4040";
 
         
 
-        'x-api-key':`${store.get("x-api-key")}`
+       
 
 
        },

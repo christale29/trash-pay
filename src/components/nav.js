@@ -14,57 +14,6 @@ import "antd/dist/antd.css";
 import TrashApis from "../services/trashApi";
 
 
-
-const { Search } = Input;
-
-const onSearch = (value) => console.log(value);
-
-const Nav = () => {
-  const [visible, setVisible] = useState(false);
-  const [signInvisible, setsignInVisible] = useState(false);
-  // const navigate =useNavigate();
-  const onFinish = (values) => {
-    console.log("Received values of form", values);
-    TrashApis.createAccount(values).then((res) => {
-      if (!res) {
-        return notification.error({ message: "server is down" });
-      }
-      if (!res) {
-        return notification.success({
-          message: "your account has been created",
-        });
-      } else {
-        return notification.error({
-          message: !res.data.error ? res.data.message : res.data.error,
-        });
-      }
-    });
-    TrashApis.signin(values).then((res) => {
-      if (!res) {
-        return notification.error({ message: "server is down" });
-      }
-      if (res.status === 200) {
-        console.log(res.data.data);
-
-
-import {Link} from "react-router-dom"
-
-// import signin from "./sign"
-import { useNavigate } from "react-router";
-
-// import { useNavigate } from "react-router";
-import {useNavigate} from 'react-router-dom'
-
-import { Input, notification, Space } from "antd";
-import { Menu, Dropdown } from "antd";
-import { Modal, Form, InputNumber, Button, Checkbox } from "antd";
-import { DownOutlined, LockOutlined, UserOutlined } from "@ant-design/icons";
-import "antd/dist/antd.css";
-import TrashApis from "../services/trashApi";
-// import './index.css';
-// import { Form, Input, Button, Checkbox } from 'antd';
-// import { UserOutlined, LockOutlined } from '@ant-design/icons';
-
 const { Search } = Input;
 
 const onSearch = (value) => console.log(value);
@@ -138,7 +87,7 @@ const Nav = () => {
   };
   
 
-  const navigate = useNavigate();
+ 
 
   return (
     <>

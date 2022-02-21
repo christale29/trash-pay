@@ -1,4 +1,5 @@
 import React from 'react';
+import  DashboardLayout from "../../components/DashboardLayout";
 import{Form,Input,Space,DatePicker,InputNumber,Button,Select} from 'antd';
 const NewHouseView=()=>{
     const onFinish=(values)=>{
@@ -7,7 +8,7 @@ const NewHouseView=()=>{
     const { Option } = Select;
     
     return(
-      <>
+      <DashboardLayout>
         <Form onFinish={onFinish}>
           <Form.Item name='houseNo'label='House Number'rules={[{required:true}]
           }>
@@ -26,7 +27,7 @@ const NewHouseView=()=>{
 
         <Button htmlType='submit' type='primary'> Register House</Button>
         </Form>
-        </>
+        </DashboardLayout>
 
     )
 }

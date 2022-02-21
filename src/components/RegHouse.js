@@ -3,6 +3,7 @@ import Homelayout from "../components/homelayout";
 import { Input, Form, InputNumber, Button, Checkbox } from "antd";
 import { DownOutlined, LockOutlined, UserOutlined } from "@ant-design/icons";
 import "../components/homelayout.css";
+import {Link} from "react-router-dom"
 // import Nav from "../components/nav"
 
 const RegHouse = () => {
@@ -84,9 +85,9 @@ const RegHouse = () => {
 
               <div className="buto">
                 <Form.Item>
-                  <Button type="primary" htmlType="submit">
+                <Link to="/JustifyPay"><Button type="primary" htmlType="submit">
                     Register
-                  </Button>
+                  </Button></Link>
                 </Form.Item>
               </div>
             </div>

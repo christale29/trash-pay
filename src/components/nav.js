@@ -153,7 +153,7 @@ const Nav = () => {
                     overlay={
                       <Menu>
                         <Menu.Item key="0">
-                        <Link to="/JustifyPay"><a href="/JustifyPay">Register the house</a></Link>
+                        <a href="/JustifyPay">Register the house</a>
                         </Menu.Item>
                         <Menu.Item key="1">
                           <a href="/JustifyPay">Justify your payment</a>

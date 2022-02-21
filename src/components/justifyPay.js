@@ -3,6 +3,7 @@ import Homelayout from "../components/homelayout";
 import { Input, Form, InputNumber, Button, Checkbox, Space, Radio } from "antd";
 import { DownOutlined, LockOutlined, UserOutlined } from "@ant-design/icons";
 import "../components/homelayout.css";
+import {Link} from "react-router-dom"
 // import Nav from "../components/nav"
 
 const PaymentDetail = () => {
@@ -125,9 +126,9 @@ const PaymentDetail = () => {
 
               <div className="buto1">
                 <Form.Item style={{ marginLeft: "25px" }}>
-                  <Button type="primary" htmlType="submit">
+                <Link to="/QRcode"><Button type="primary" htmlType="submit">
                     Pay Now
-                  </Button>
+                  </Button></Link>
                 </Form.Item>
               </div>
             </div>

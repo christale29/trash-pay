@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./header.css";
 import "antd/dist/antd.css";
-// import signin from "./sign"
+
 // import { useNavigate } from "react-router";
+
 import {useNavigate} from 'react-router-dom'
+
 import { Input, notification, Space } from "antd";
 import { Menu, Dropdown } from "antd";
 import { Modal, Form, InputNumber, Button, Checkbox } from "antd";
 import { DownOutlined, LockOutlined, UserOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import TrashApis from "../services/trashApi";
-// import './index.css';
-// import { Form, Input, Button, Checkbox } from 'antd';
-// import { UserOutlined, LockOutlined } from '@ant-design/icons';
+
 
 const { Search } = Input;
 
@@ -21,7 +21,7 @@ const onSearch = (value) => console.log(value);
 const Nav = () => {
   const [visible, setVisible] = useState(false);
   const [signInvisible, setsignInVisible] = useState(false);
-
+  const navigate =useNavigate();
   const onFinish = (values) => {
     console.log("Received values of form", values);
     TrashApis.createAccount(values).then((res) => {
@@ -60,9 +60,34 @@ const Nav = () => {
         });
       }
     });
-  };
 
-  const navigate = useNavigate();
+  };
+  const onFinishSignIn = (values) => {
+    console.log("Received values of form", values);
+    TrashApis.signInUser(values).then((res) => {
+      if (!res) {
+        return notification.error({ message: "server is down" });
+      }
+      if (res.status===200) {
+        console.log(res.data.data);
+        if(res.data.data.status="admin"){
+          localStorage.setItem("userLogedIn", true);
+          navigate("/dash")
+        }
+        return notification.success({
+          message: "your account has been created",
+        });
+      } else {
+        return notification.error({
+          message: !res.data.error ? res.data.message : res.data.error,
+        });
+      }
+    });
+    
+  };
+  
+
+ 
 
   return (
     <>
@@ -77,7 +102,7 @@ const Nav = () => {
         <h2>signin form</h2>
         <Form
         style={{paddingLeft:"50px"}}
-          onFinish={onFinish}
+          onFinish={onFinishSignIn}
           name="normal_login"
           className="login-form"
           initialValues={{
@@ -152,11 +177,11 @@ const Nav = () => {
                     overlay={
                       <Menu>
                         <Menu.Item key="0">
-                          <a href="/RegHouse">Register the house</a>
+                        <a href="/JustifyPay">Register the house</a>
                         </Menu.Item>
                         <Menu.Item key="1">
                           <a href="/JustifyPay">Justify your payment</a>
-                        </Menu.Item>
+                          </Menu.Item>
                         <Menu.Item key="1">
                           <a href="/QRcode">See your records</a>
                         </Menu.Item>

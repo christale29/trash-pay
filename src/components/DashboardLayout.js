@@ -32,9 +32,14 @@ const DashboardLayout=({children})=>{
                 <Menu.Item key="2" icon={<VideoCameraOutlined />}>
                 <Link to='/dash/house' >Manage all Payment </Link>
                 </Menu.Item>
+
                 <Menu.Item key="3" icon={<UploadOutlined />}
                 onClick={() => localStorage.removeItem("userLogedIn")}>
                 <Link to='/dash/login' >Login</Link>
+
+                <Menu.Item key="3" icon={<UploadOutlined />}>
+                <Link to='/' >Logout</Link>
+
                 </Menu.Item>
               </Menu>
             </Sider>

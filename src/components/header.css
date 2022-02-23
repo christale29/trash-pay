@@ -8,14 +8,14 @@
 }
 .nav-logo-left{
     /* float:left; */
-    height:100px;
+    height:15vh;
     /* background:red; */
-    width: 50%;
+    width:60%;
     
 }
 .nav-logo-left img{
     margin-left:10%;
-
+width: 30%;
 }
 .nav-logo-left img{
     object-fit: cover;

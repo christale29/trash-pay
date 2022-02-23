@@ -1,5 +1,5 @@
 .Footer-container{
-    background: rgb(69, 114, 66);
+    background: rgb(20, 43, 17);
     height:43vh;
     width:100%;
     
@@ -10,6 +10,16 @@
     font-size: 20px;
   padding-bottom: 100px;
 }*/
+.footerwall{
+    width: 100%;
+    height: 15vh;
+    /* background-color: white; */
+}
+.Footer-wrapper{
+    width: 100%;
+    background-image:url(../asset/img/wave.png);
+    height: 15vh;
+}
 .Footer_words{
     /* background: rgb(33, 49, 32); */
     height:40vh;
@@ -57,7 +67,7 @@
 .icon{
     padding-left: 400px;
     margin-left: 10px;
-    color:black;
+    color:rgb(139, 134, 134);
     font-size: 30px;
    display: flex;
 }

@@ -4,31 +4,33 @@ import {Table,Space} from 'antd';
 import AllavailableHOUSE from '../../asset/img/constant/house.json';
 import AllavailabeUsers from'../../asset/img/constant/infomation.json';
 import{EyeOutlined,EditOutlined,DeleteOutlined } from '@ant-design/icons';
+
+const {column, columnGroup} = Table
 const Column =[
     {
-        title:'House Number',
-        dataIndex:'houseNo',
-        key:'houseNo',
+        title:"House Number",
+        dataIndex:"houseNo",
+        key:"houseNo",
 
     },
 
     {
-        title:'District',
-        dataIndex:'district',
-        key:'district',
+        title:"District",
+        dataIndex:"district",
+        key:"district",
 
     },
     {
-        title:'Sector',
-        dataIndex:'sector',
-        key:'sector',
+        title:"Sector",
+        dataIndex:"sector",
+        key:"sector",
 
     },
    
     {
-        title:'Actions',
-        dataIndex:'action',
-        render:(text,record)=>(
+        title:"Actions",
+        dataIndex:"action",
+        render:()=>(
             <Space size ='middle'>
              <a><EyeOutlined></EyeOutlined></a>
              <a><EditOutlined></EditOutlined></a>
@@ -56,8 +58,8 @@ const Column1 =[
     
     {
         title:'Actions',
-        dataIndex:'action',
-        render:(text,record)=>(
+        key:'action',
+        render:()=>(
             <Space size ='middle'>
              <a style={{color:"green"}}>Accept</a>
              <a style={{color:"red"}}>Reject</a>

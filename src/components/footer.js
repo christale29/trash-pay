@@ -9,6 +9,12 @@ import {
 import logo2 from "../asset/img/trash.png";
 const Footer = () => {
   return (
+    <>
+    <div className="footerwall">
+    <div className="Footer-wrapper">
+
+      </div>
+      </div>
     <div class="Footer-container">
       <div class="Footer_words">
         {/* <h1>TRASHPAY</h1> */}
@@ -45,6 +51,8 @@ const Footer = () => {
          <h4>CoolEndCoders</h4>
       </div>
     </div>
+    </>
   );
 };
+
 export default Footer;
